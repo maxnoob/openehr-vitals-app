@@ -1,14 +1,22 @@
-# task1-vitals
+# Task 1 - Vitals (openEHR Bootcamp)
 
-This template should help get you started developing with Vue 3 in Vite.
+## Features
+- **Create a Composition** by entering values in the form and clicking the **"Save Values"** button.  
+  - This sends a **POST** request in the `postComposition` function.
+- **View Created Compositions** as cards listed on the right.  
+  - This is done by sending a **POST** request in the `listCompositions` function, which executes an **AQL query** to fetch compositions.
+- **Delete a Composition** by clicking the delete button.  
+  - This sends a **DELETE** request to the server.
+- **Edit a Composition** by clicking a listed composition.  
+  - The values are retrieved via a **GET** request in the `loadComposition` function and populate the form.  
+  - The **"Save Values"** button dynamically changes to **"Update Values"**.  
+  - Editing can be **canceled** by clicking **"New"** next to the form title.
 
-## Recommended IDE Setup
+### Backend Configuration
+- By default, the application communicates with the **Medblocks EHRBase server**.
+- You can also run **EHRBase locally using Docker**.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
 ## Project Setup
 
